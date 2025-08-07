@@ -20,7 +20,7 @@ def load_smplx_file(smplx_file, smplx_body_model_path):
     
     num_frames = smplx_data["pose_body"].shape[0]
     smplx_output = body_model(
-        betas=torch.tensor(smplx_data["betas"]).float().view(1, -1), # (16,)
+        betas=torch.tensor(smplx_data["betas"]).float().view(1, -1)[:, :10], # (16,)
         global_orient=torch.tensor(smplx_data["root_orient"]).float(), # (N, 3)
         body_pose=torch.tensor(smplx_data["pose_body"]).float(), # (N, 63)
         transl=torch.tensor(smplx_data["trans"]).float(), # (N, 3)
@@ -29,7 +29,7 @@ def load_smplx_file(smplx_file, smplx_body_model_path):
         jaw_pose=torch.zeros(num_frames, 3).float(),
         leye_pose=torch.zeros(num_frames, 3).float(),
         reye_pose=torch.zeros(num_frames, 3).float(),
-        # expression=torch.zeros(num_frames, 10).float(),
+        expression=torch.zeros(num_frames, 10).float(),
         return_full_pose=True,
     )
     

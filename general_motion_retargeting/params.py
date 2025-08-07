@@ -12,6 +12,8 @@ ROBOT_XML_DICT = {
     "engineai_pm01": ASSET_ROOT / "engineai_pm01" / "pm_v2.xml",
     "kuavo_s45": ASSET_ROOT / "kuavo_s45" / "biped_s45_collision.xml",
     "hightorque_hi": ASSET_ROOT / "hightorque_hi" / "hi_25dof.xml",
+    "berkeley_humanoid_lite": ASSET_ROOT / "berkeley_humanoid_lite" / "berkeley_humanoid_lite.xml",
+    "pebble": ASSET_ROOT / "pebble" / "pebble.xml",
 }
 
 IK_CONFIG_DICT = {
@@ -24,6 +26,8 @@ IK_CONFIG_DICT = {
         "engineai_pm01": IK_CONFIG_ROOT / "smplx_to_pm01.json",
         "kuavo_s45": IK_CONFIG_ROOT / "smplx_to_kuavo.json",
         "hightorque_hi": IK_CONFIG_ROOT / "smplx_to_hi.json",
+        "berkeley_humanoid_lite": IK_CONFIG_ROOT / "smplx_to_bhl.json",
+        "pebble": IK_CONFIG_ROOT / "smplx_to_pebble.json",
     },
     "bvh":{
         "unitree_g1": IK_CONFIG_ROOT / "bvh_to_g1.json",
@@ -31,6 +35,7 @@ IK_CONFIG_DICT = {
         "fourier_n1": IK_CONFIG_ROOT / "bvh_to_n1.json",
         "stanford_toddy": IK_CONFIG_ROOT / "bvh_to_toddy.json",
         "engineai_pm01": IK_CONFIG_ROOT / "bvh_to_pm01.json",
+        "pebble": IK_CONFIG_ROOT / "bvh_to_pebble.json",
     },
     "fbx":{
         "unitree_g1": IK_CONFIG_ROOT / "fbx_to_g1.json",
@@ -46,6 +51,8 @@ ROBOT_BASE_DICT = {
     "engineai_pm01": "LINK_BASE",
     "kuavo_s45": "base_link",
     "hightorque_hi": "base_link",
+    "berkeley_humanoid_lite": "base",
+    "pebble": "hip_mid_section",
 }
 
 VIEWER_CAM_DISTANCE_DICT = {
@@ -56,4 +63,6 @@ VIEWER_CAM_DISTANCE_DICT = {
     "engineai_pm01": 2.0,
     "kuavo_s45": 2.0,
     "hightorque_hi": 2.0,
+    "berkeley_humanoid_lite": 2.0,
+    "pebble": 2.0,
 }
